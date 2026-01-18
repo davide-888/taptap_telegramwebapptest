@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.stats p {
+  margin: 5px 0;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#tapBtn {
+  background: #ff7a00;
+  color: #fff;
+}
+
+#watchAdBtn {
+  background: #007bff;
+  color: #fff;
+}
+
+#closeAdBtn {
+  background: #444;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
