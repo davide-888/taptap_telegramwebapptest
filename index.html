@@ -1,26 +1,55 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ad Viewer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <meta charset="UTF-8" />
+  <title>Ad Grinder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <div class="container">
-    <h1>Ad Viewer</h1>
+  <div class="app">
 
-    <p id="counter">Pubblicità guardate: 0</p>
+    <header class="app-header">
+      <h1 class="logo">Ad Grinder</h1>
+      <p id="user-info" class="subtitle">Loading user...</p>
+    </header>
 
-    <button id="watchAdBtn">🎥 Guarda pubblicità</button>
+    <section class="stats">
+      <div class="stat-card">
+        <span class="stat-label">Total Ads Watched</span>
+        <span id="ads-count" class="stat-value">0</span>
+      </div>
+    </section>
 
-    <div id="adBox" class="hidden">
-      <p>Qui apparirà la pubblicità vera (Monetag / Adsterra / AdSense).</p>
-      <button id="closeAdBtn">Chiudi</button>
-    </div>
+    <section class="actions">
+      <button id="watch-ad-btn" class="btn primary-btn">
+        Watch AD
+      </button>
+    </section>
+
+    <section class="leaderboard">
+      <h2>Global Leaderboard</h2>
+      <ol id="leaderboard" class="leaderboard-list"></ol>
+    </section>
+
+    <section class="info-section">
+      <h3>Why this app exists</h3>
+      <p>
+        I created this app to raise money so I can buy a new PC.
+        Once I reach my goal, I will start doing weekly crypto giveaways
+        to thank everyone who supported me.
+      </p>
+    </section>
+
   </div>
 
-  <script src="script.js"></script>
+  <!-- Toast notification -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- Scripts -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="monetag.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
